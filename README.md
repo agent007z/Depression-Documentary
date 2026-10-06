@@ -4,95 +4,36 @@
 
 ##  Workflow
 
-```text
-DATA
-  │
-  ▼
-EDA
-  │
-  ├── Skewness
-  ├── Kurtosis
-  ├── Correlation
-  ├── P-Value
-  └── RF Feature Importance
-  │
-  ▼
-PREPROCESSING
-  │
-  ├── Missing Value Handling
-  ├── Duplicate Removal
-  ├── Outlier Management
-  ├── One-Hot Encoding
-  └── Custom Mapping Encoding
-  │
-  ▼
-TRAIN / TEST SPLIT
-  │
-  ├── Train = 80%
-  └── Test  = 20%
-  │
-  ▼
-MACHINE LEARNING
-  │
-  ├── Logistic Regression
-  ├── SVM
-  ├── CatBoost
-  ├── KNN
-  ├── Random Forest
-  ├── XGBoost
-  ├── Gradient Boosting
-  └── Decision Tree
-  │
-  ▼
-BAYESIAN OPTIMIZATION
-  │
-  ▼
-TOP-3 MODELS
-  │
-  ├── SVM
-  ├── Logistic Regression
-  └── CatBoost
-  │
-  ▼
-STACKING ENSEMBLE
-  │
-  ▼
-EVALUATION
-  │
-  ├── Accuracy
-  ├── Precision
-  ├── Sensitivity
-  ├── F1-Score
-  ├── ROC-AUC
-  ├── Stratified 5-Fold CV
-  ├── Stress Test
-  └── 95% BCI
-  │
-  ▼
-XAI
-  │
-  ├── SHAP
-  │   ├── Summary Plot
-  │   ├── Decision Plot
-  │   └── Force Plot
-  │
-  └── LIME
-  │
-  ▼
-RISK ANALYSIS
-  │
-  ├── Identification and analysis of key risk factors
-  ├── Detection of depression severity
-  └── Risk Assessment
-  │
-  ▼
-DECISION SUPPORT SYSTEM
-  │
-  ├── User Input
-  ├── Prediction
-  ├── Risk Level
-  └── Recommendation
+```mermaid
+flowchart TD
+
+    A[" DATA<br/>Mendeley Data<br/>DIU + DU"]
+
+    B[" EDA<br/>Skewness • Kurtosis • Correlation<br/>P-Value • RF Feature Importance"]
+
+    C[" PREPROCESSING<br/>Missing Values • Duplicates • Outliers<br/>One-Hot Encoding • Custom Mapping"]
+
+    D[" TRAIN / TEST SPLIT<br/>80% Train | 20% Test"]
+
+    E[" MACHINE LEARNING<br/>LR • SVM • CatBoost • KNN<br/>RF • XGBoost • GB • DT"]
+
+    F[" BAYESIAN<br/>HYPERPARAMETER OPTIMIZATION"]
+
+    G[" TOP-3 MODELS<br/>SVM • Logistic Regression • CatBoost"]
+
+    H[" STACKING ENSEMBLE"]
+
+    I[" EVALUATION<br/>Accuracy • Precision • Sensitivity • F1<br/>ROC-AUC • 5-Fold CV • Stress Test • 95% BCI"]
+
+    J[" XAI<br/>SHAP + LIME<br/>Summary • Decision • Force Plot"]
+
+    K[" RISK ANALYSIS<br/>Key Risk Factors<br/>Depression Severity • Risk Assessment"]
+
+    L[" DECISION SUPPORT SYSTEM<br/>User Input → Prediction → Risk Level → Recommendation"]
+
+    A --> B --> C --> D --> E --> F --> G --> H --> I --> J --> K --> L
 ```
+
 
 ---
 
